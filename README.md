@@ -61,23 +61,40 @@ To scale this chatbot to a GPT-powered assistant fine-tuned on NLTI's content:
 - Add user feedback and response improvement loop.
 - Support for voice queries and mobile-friendly UI.
 
-## 🧑‍💻 Author
-
-Developed as part of the NLTI Internship Assignment – Task 2
-The working and explanation video is also uploaded in the repo
 
 
-##**The other approach**
-This approach is of **scraping the webpage of NLTI** and obtain all the **postings links** available or posted on the home page..along with the **important dates** mentioned in the home page.
-These are embedded and stored in the vector database(FAISS) to build an **RAG chain** for retirval purposes
-then parsed through the LLMs to generate a response of the query being asked by the user.
-for increasing accuracy we can consider using OpenAi embeddings and gpt4
-**The files under them are:**
-1-> app.py
-2->rag_utils.py
 
- Run the chatbot:
+## 🔍 **Alternative Approach: Web Scraping + RAG with FAISS**
+As an additional experiment, I explored a Retrieval-Augmented Generation (RAG) approach by integrating real-time data from the NLTI website.
+
+## 🔹 What This Approach Does
+Scrapes the homepage of NLTI to extract all post links and important dates.
+
+Embeds this data using vector embeddings and stores them in a FAISS vector database.
+
+At query time, uses a RAG chain to retrieve the most relevant chunks from the scraped data.
+
+Feeds the results into an LLM (like GPT-4) to generate contextual responses.
+
+## 🛠️ Implementation Files
+app.py – the main Streamlit app entry point.
+
+rag_utils.py – utilities for scraping, embedding, and retrieval.
+
+## ▶️ To Run This Version
+Run the chatbot:
 
 ```
 streamlit run app.py
 ```
+## 🚀 Future Enhancements
+Swap current embeddings with OpenAI Embeddings for better semantic capture.
+
+Use GPT-4 or Claude for more context-aware answers.
+
+Extend scraping to cover other NLTI sections (e.g., mentors, FAQ, blog, success stories).
+```
+## 🧑‍💻 Author
+
+Developed as part of the NLTI Internship Assignment – Task 2
+The working and explanation video is also uploaded in the repo
