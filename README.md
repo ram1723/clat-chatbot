@@ -65,3 +65,19 @@ To scale this chatbot to a GPT-powered assistant fine-tuned on NLTI's content:
 
 Developed as part of the NLTI Internship Assignment – Task 2
 The working and explanation video is also uploaded in the repo
+
+
+##**The other approach**
+This approach is of **scraping the webpage of NLTI** and obtain all the **postings links** available or posted on the home page..along with the **important dates** mentioned in the home page.
+These are embedded and stored in the vector database(FAISS) to build an **RAG chain** for retirval purposes
+then parsed through the LLMs to generate a response of the query being asked by the user.
+for increasing accuracy we can consider using OpenAi embeddings and gpt4
+**The files under them are:**
+1-> app.py
+2->rag_utils.py
+
+ Run the chatbot:
+
+```
+streamlit run app.py
+```
