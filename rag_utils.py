@@ -1,3 +1,7 @@
+# Setup
+!apt update > /dev/null
+!apt install chromium-chromedriver > /dev/null
+!pip install selenium > /dev/null
 import faiss
 import pickle
 from sentence_transformers import SentenceTransformer
