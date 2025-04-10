@@ -64,3 +64,4 @@ To scale this chatbot to a GPT-powered assistant fine-tuned on NLTI's content:
 ## 🧑‍💻 Author
 
 Developed as part of the NLTI Internship Assignment – Task 2
+The working and explanation video is also uploaded in the repo
